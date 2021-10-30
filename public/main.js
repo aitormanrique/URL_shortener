@@ -42,12 +42,11 @@ function send_request(url) {
         url: endpoint + '/' + window.location.hash.substr(1),
         headers: {
             "X-Test-Header": "test-value",
-            "Access-Control-Allow-Origin": "*"
+            "Access-Control-Allow-Origin": "*",
+            "Content-Type": "application/json"
         },
         method: "POST",
         data: JSON.stringify(this.url),
-        dataType: "json",
-        contentType: "application/json"
     }
     )
 }
