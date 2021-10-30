@@ -1,0 +1,50 @@
+security:
+    enable_authenticator_manager: true
+    # ...
+    encoders:
+        App\Entity\User:
+            algorithm: bcrypt
+            cost: 4
+
+    providers:
+        app_user_provider:
+            entity:
+                # the class of the entity that represents users
+                class: 'App\Entity\User'
+                # the property to query by - e.g. email, username, etc
+                property: 'email'
+    firewalls:
+
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        login:
+            pattern: ^/api/store-login
+            stateless: true
+            provider: 'app_user_provider'
+            json_login:
+                check_path: /api/store-login-check
+                success_handler: lexik_jwt_authentication.handler.authentication_success
+                failure_handler: lexik_jwt_authentication.handler.authentication_failure
+
+        main:
+            lazy: true
+            provider: app_user_provider
+            guard:
+                authenticators:
+                    - App\Admin\Security\UserAuthenticator
+            logout:
+                path: admin_logout
+                target: admin_login
+
+    access_control:
+        - { path: ^/api/store-login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin, roles: ROLE_USER }
+
+    role_hierarchy:
+        ROLE_SUPER_ADMIN:
+            - ROLE_ADMIN
+            - ROLE_USER
+        ROLE_USER:
+            - ROLE_USER

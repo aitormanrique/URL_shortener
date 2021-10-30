@@ -1,0 +1,24 @@
+index:
+    path: /
+    controller: App\Controller\RankingController::index
+
+admin_login:
+    path: /login
+    controller: App\Admin\Security\SecurityController::login
+
+admin_logout:
+    path: /logout
+    controller: App\Admin\Security\SecurityController::logout
+
+admin_index:
+    path: /admin/
+    controller: App\Admin\Dashboard\MyDashboard::index
+
+authentication_token:
+    path: /authentication_token
+    methods: ['POST']
+
+store-login-check-check:
+    path: /api/store-login-check
+
+
