@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Twig\Environment;
 
 
-class RankingController extends AbstractController
+class URLShortenerController extends AbstractController
 {
 
     public function index(Environment $twig): Response

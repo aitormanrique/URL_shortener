@@ -1,6 +1,6 @@
 index:
     path: /
-    controller: App\Controller\RankingController::index
+    controller: App\Controller\URLShortenerController::index
 
 admin_login:
     path: /login
