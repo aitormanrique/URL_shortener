@@ -33,10 +33,11 @@ class ShortUrlController extends AbstractController
     {
         if ($this->session->has('value')) {
             $value = $this->session->get('value');
-            $this->session->remove('value');
             return new Response($twig->render('test.html.twig', [
                 'value' => $value
             ]));
+        } else {
+            return new Response($twig->render('notFoundTemplate.html.twig'));
         }
     }
 }

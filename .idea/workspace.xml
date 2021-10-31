@@ -166,20 +166,9 @@
       <change beforePath="$PROJECT_DIR$/../etc/bash/reset_database.sh" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../etc/deploy/deploy.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../etc/deploy/hosts/hosts.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$" beforeDir="false" afterPath="$PROJECT_DIR$" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/URLShortenerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/URLShortenerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Urls.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Urls.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ShortUrlController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ShortUrlController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/TestUrlsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/TestUrlsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../llamadas_api/Backend/getConfiguration.http" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../llamadas_api/Backend/group.http" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../llamadas_api/Backend/upload_image.http" beforeDir="false" />
@@ -694,6 +683,12 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+      <option value="repository" />
+    </option>
+  </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
@@ -844,7 +839,7 @@
       <workItem from="1635060779925" duration="12306000" />
       <workItem from="1635596081785" duration="1740000" />
       <workItem from="1635597833360" duration="2976000" />
-      <workItem from="1635671820875" duration="15194000" />
+      <workItem from="1635671820875" duration="17431000" />
     </task>
     <task id="LOCAL-00001" summary="js url shortener">
       <created>1635612177664</created>
@@ -860,7 +855,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635613005529</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="acortador urls efectivo">
+      <created>1635687291208</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1635687291209</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -893,7 +895,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="js url shortener" />
     <MESSAGE value="request" />
-    <option name="LAST_COMMIT_MESSAGE" value="request" />
+    <MESSAGE value="acortador urls efectivo" />
+    <option name="LAST_COMMIT_MESSAGE" value="acortador urls efectivo" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2829" y="415" width="732" height="644" key="#Inspections" timestamp="1635009361156">
@@ -912,62 +915,62 @@
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="2787" y="430" width="806" height="620" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1635680751304" />
-    <state x="2933" y="491" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1635686616906">
+    <state x="2933" y="491" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1635691618207">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="2933" y="491" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1635686616906" />
+    <state x="2933" y="491" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1635691618207" />
     <state x="2983" y="491" width="424" height="491" key="FileChooserDialogImpl" timestamp="1635000218416">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="2983" y="491" width="424" height="491" key="FileChooserDialogImpl/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1635000218416" />
-    <state width="2518" height="486" key="GridCell.Tab.0.bottom" timestamp="1635686832125">
+    <state width="2518" height="486" key="GridCell.Tab.0.bottom" timestamp="1635692161291">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state width="2518" height="486" key="GridCell.Tab.0.bottom/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1635686832125" />
-    <state width="2518" height="486" key="GridCell.Tab.0.center" timestamp="1635686832124">
+    <state width="2518" height="486" key="GridCell.Tab.0.bottom/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1635692161291" />
+    <state width="2518" height="486" key="GridCell.Tab.0.center" timestamp="1635692161291">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state width="2518" height="486" key="GridCell.Tab.0.center/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1635686832124" />
-    <state width="2518" height="486" key="GridCell.Tab.0.left" timestamp="1635686832124">
+    <state width="2518" height="486" key="GridCell.Tab.0.center/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1635692161291" />
+    <state width="2518" height="486" key="GridCell.Tab.0.left" timestamp="1635692161291">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state width="2518" height="486" key="GridCell.Tab.0.left/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1635686832124" />
-    <state width="2518" height="486" key="GridCell.Tab.0.right" timestamp="1635686832125">
+    <state width="2518" height="486" key="GridCell.Tab.0.left/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1635692161291" />
+    <state width="2518" height="486" key="GridCell.Tab.0.right" timestamp="1635692161291">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state width="2518" height="486" key="GridCell.Tab.0.right/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1635686832125" />
-    <state width="2518" height="486" key="GridCell.Tab.1.bottom" timestamp="1635686832125">
+    <state width="2518" height="486" key="GridCell.Tab.0.right/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1635692161291" />
+    <state width="2518" height="486" key="GridCell.Tab.1.bottom" timestamp="1635692161633">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state width="2518" height="486" key="GridCell.Tab.1.bottom/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1635686832125" />
-    <state width="2518" height="486" key="GridCell.Tab.1.center" timestamp="1635686832125">
+    <state width="2518" height="486" key="GridCell.Tab.1.bottom/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1635692161633" />
+    <state width="2518" height="486" key="GridCell.Tab.1.center" timestamp="1635692161633">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state width="2518" height="486" key="GridCell.Tab.1.center/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1635686832125" />
-    <state width="2518" height="486" key="GridCell.Tab.1.left" timestamp="1635686832125">
+    <state width="2518" height="486" key="GridCell.Tab.1.center/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1635692161633" />
+    <state width="2518" height="486" key="GridCell.Tab.1.left" timestamp="1635692161633">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state width="2518" height="486" key="GridCell.Tab.1.left/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1635686832125" />
-    <state width="2518" height="486" key="GridCell.Tab.1.right" timestamp="1635686832125">
+    <state width="2518" height="486" key="GridCell.Tab.1.left/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1635692161633" />
+    <state width="2518" height="486" key="GridCell.Tab.1.right" timestamp="1635692161633">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state width="2518" height="486" key="GridCell.Tab.1.right/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1635686832125" />
-    <state width="2518" height="486" key="GridCell.Tab.2.bottom" timestamp="1635686832125">
+    <state width="2518" height="486" key="GridCell.Tab.1.right/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1635692161633" />
+    <state width="2518" height="486" key="GridCell.Tab.2.bottom" timestamp="1635692161195">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state width="2518" height="486" key="GridCell.Tab.2.bottom/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1635686832125" />
-    <state width="2518" height="486" key="GridCell.Tab.2.center" timestamp="1635686832125">
+    <state width="2518" height="486" key="GridCell.Tab.2.bottom/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1635692161195" />
+    <state width="2518" height="486" key="GridCell.Tab.2.center" timestamp="1635692161195">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state width="2518" height="486" key="GridCell.Tab.2.center/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1635686832125" />
-    <state width="2518" height="486" key="GridCell.Tab.2.left" timestamp="1635686832125">
+    <state width="2518" height="486" key="GridCell.Tab.2.center/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1635692161195" />
+    <state width="2518" height="486" key="GridCell.Tab.2.left" timestamp="1635692161195">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state width="2518" height="486" key="GridCell.Tab.2.left/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1635686832125" />
-    <state width="2518" height="486" key="GridCell.Tab.2.right" timestamp="1635686832125">
+    <state width="2518" height="486" key="GridCell.Tab.2.left/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1635692161195" />
+    <state width="2518" height="486" key="GridCell.Tab.2.right" timestamp="1635692161195">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state width="2518" height="486" key="GridCell.Tab.2.right/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1635686832125" />
+    <state width="2518" height="486" key="GridCell.Tab.2.right/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1635692161195" />
     <state x="2958" y="458" width="501" height="585" key="NewPhpClassDialog" timestamp="1635682233014">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
@@ -980,10 +983,10 @@
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="2704" y="368" width="992" height="737" key="SettingsEditor/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1635000599524" />
-    <state x="2795" y="469" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1635613009788">
+    <state x="2795" y="469" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1635687296365">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
-    <state x="2795" y="469" width="800" height="535" key="Vcs.Push.Dialog.v2/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1635613009788" />
+    <state x="2795" y="469" width="800" height="535" key="Vcs.Push.Dialog.v2/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1635687296365" />
     <state x="2743" y="456" width="904" height="562" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1635064732668">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
@@ -996,6 +999,11 @@
           <url>file://$PROJECT_DIR$/src/Admin/Security/SecurityController.php</url>
           <line>13</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Controller/ShortUrlController.php</url>
+          <line>46</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

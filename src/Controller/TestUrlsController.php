@@ -6,6 +6,7 @@ namespace App\Controller;
 
 use App\Entity\Urls;
 use App\Services\UrlsFinder;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -18,10 +19,18 @@ class TestUrlsController extends AbstractController
      * @var UrlsFinder
      */
     private $finder;
+    /**
+     * @var EntityManagerInterface
+     */
+    private $entityManager;
 
-    public function __construct(UrlsFinder $finder)
+    public function __construct(
+        UrlsFinder $finder,
+        EntityManagerInterface $entityManager
+    )
     {
         $this->finder = $finder;
+        $this->entityManager = $entityManager;
     }
 
     public function index(
@@ -32,8 +41,12 @@ class TestUrlsController extends AbstractController
     ): Response
     {
         $session->set('value', $value);
+
         $url = $this->finder->getUrlByLongOne($request->getPathInfo());
 
+        $url->setVisitas($url->getVisitas() + 1);
+        $this->entityManager->persist($url);
+        $this->entityManager->flush();
         if ($url instanceof Urls) {
             return $this->redirectToRoute('short_url', ['value' => $url->getShorter()]);
 
