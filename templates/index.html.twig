@@ -2,10 +2,68 @@
 
 {% block body %}
     <div>
-        <input type='url' id='urlinput'>
+        <input style="width: 500px" type='url' id='urlinput' value="/api/lista-compra/2021/noviembre/primera-semana/mercadona">
         <button onclick='shorturl()'>
             Short The URL
         </button>
 
     </div>
+    <br>
+    <br>
+    <div>
+        <span>test url:</span>
+    </div>
+    <br>
+    <div>
+        <span>/api/lista-compra/2021/noviembre/primera-semana/mercadona</span>
+    </div>
+
+    <br>
+    <br>
+    {% set urls = UrlsFinder.getUrls %}
+    {% for value in urls %}
+        <div>
+                <a href="{{ value }}">{{ value }}</a>
+        </div>
+    {% endfor %}
+    <script>
+
+        function getrandom(){
+            return random_string = Math.random().toString(32).substring(2, 5) + Math.random().toString(32).substring(2, 5);
+        }
+
+        function geturl(){
+            return document.getElementById('urlinput').value;
+        }
+
+        function genhash(){
+            return getrandom();
+        }
+
+        function send_request(longurl, shortUrl) {
+
+            $.ajax({
+                    url: 'api/set_url',
+                    method: "POST",
+                    data: {
+                        longUrl: longurl,
+                        shortUrl: shortUrl
+                    },
+                    success: function (data) {
+                        location.reload();
+                    },
+                    error: function (data) {
+                        alert("error");
+                    },
+                }
+            )
+        }
+
+        function shorturl(){
+            var longurl = geturl();
+            var shortUrl = genhash();
+            send_request(longurl, shortUrl);
+        }
+
+    </script>
 {% endblock %}

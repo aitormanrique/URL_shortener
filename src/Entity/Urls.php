@@ -27,6 +27,11 @@ class Urls
      */
     private $shorter;
 
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $visitas;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -52,6 +57,18 @@ class Urls
     public function setShorter(?string $shorter): self
     {
         $this->shorter = $shorter;
+
+        return $this;
+    }
+
+    public function getVisitas(): ?int
+    {
+        return $this->visitas;
+    }
+
+    public function setVisitas(?int $visitas): self
+    {
+        $this->visitas = $visitas;
 
         return $this;
     }

@@ -1,5 +1,5 @@
 index:
-    path: /
+    path: /api
     controller: App\Controller\URLShortenerController::index
 
 admin_login:
@@ -20,5 +20,17 @@ authentication_token:
 
 store-login-check-check:
     path: /api/store-login-check
+
+set_url:
+    path: /api/set_url
+    controller: App\Controller\URLSetterController
+
+lista_compra:
+    path: /api/lista-compra/2021/noviembre/primera-semana/mercadona/{value}
+    controller: App\Controller\TestUrlsController::index
+
+short_url:
+    path: /{value}
+    controller: App\Controller\ShortUrlController
 
 
