@@ -33,4 +33,6 @@ short_url:
     path: /home/{value}
     controller: App\Controller\ShortUrlController
 
-
+ranking_urls:
+    path: /api/ranking
+    controller: App\Controller\RankingController::index

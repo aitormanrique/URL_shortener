@@ -4,7 +4,6 @@
 namespace App\Services;
 
 
-use App\Entity\Urls;
 use App\Repository\UrlsRepository;
 
 class UrlsFinder
@@ -29,6 +28,12 @@ class UrlsFinder
 
         return $urlsDecoded;
     }
+
+    public function getUrlsEntity()
+    {
+        return $this->repository->findAll();
+    }
+
 
     public function getUrlByLongOne($longUrl)
     {

@@ -76,6 +76,62 @@ class Urls
         return $this->visitas;
     }
 
+    public function countVisitasTotales(): int
+    {
+        return count($this->visitas);
+    }
+
+    public function lastHourVisits(): int
+    {
+        $visits = $this->visitas;
+        $date = new \DateTime('now', new \DateTimeZone('Europe/Madrid'));
+        $lastHour = $date->modify('-1 hour');
+
+        $visitsFiltred = 0;
+
+        foreach ($visits as $visit) {
+            if ($visit->getVisitDate() >= $lastHour) {
+                $visitsFiltred++;
+            }
+        }
+
+        return $visitsFiltred;
+    }
+
+    public function lastDayVisits(): int
+    {
+        $visits = $this->visitas;
+        $date = new \DateTime('now', new \DateTimeZone('Europe/Madrid'));
+        $lastDay = $date->modify('-1 day');
+
+        $visitsFiltred = 0;
+
+        foreach ($visits as $visit) {
+            if ($visit->getVisitDate() >= $lastDay) {
+                $visitsFiltred++;
+            }
+        }
+
+        return $visitsFiltred;
+    }
+
+    public function lastWeekVisits(): int
+    {
+        $visits = $this->visitas;
+        $date = new \DateTime('now', new \DateTimeZone('Europe/Madrid'));
+        $lastWeek = $date->modify('-1 week');
+
+        $visitsFiltred = 0;
+
+        foreach ($visits as $visit) {
+            if ($visit->getVisitDate() >= $lastWeek) {
+                $visitsFiltred++;
+            }
+        }
+
+        return $visitsFiltred;
+    }
+
     public function addVisita(Visitas $visita): self
     {
         if (!$this->visitas->contains($visita)) {

@@ -2,6 +2,7 @@ twig:
     default_path: '%kernel.project_dir%/templates'
     globals:
         UrlsFinder: '@App\Services\UrlsFinder'
+        VisitsFinder: '@App\Services\VisitsFinder'
 
 when@test:
     twig:

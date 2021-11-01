@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    {% set urls = UrlsFinder.getUrls %}
+    {% set urlsEntity = UrlsFinder.getUrlsEntity %}
+
+    <table class="default">
+
+        <tr>
+
+            <th>URL</th>
+
+            <th>Visitas totales</th>
+
+            <th>Visitas Última Hora</th>
+
+            <th>Visitas Último Día</th>
+
+            <th>Visitas Última Semana</th>
+
+        </tr>
+        {% for value in urlsEntity %}
+        <tr>
+            <td style="text-align: center">{{ value.original }}</td>
+            <td style="text-align: center">{{ value.countVisitasTotales }}</td>
+            <td style="text-align: center">{{ value.lastHourVisits }}</td>
+            <td style="text-align: center">{{ value.lastDayVisits }}</td>
+            <td style="text-align: center">{{ value.lastWeekVisits }}</td>
+
+        </tr>
+        {% endfor %}
+
+    </table>
+
+{% endblock %}

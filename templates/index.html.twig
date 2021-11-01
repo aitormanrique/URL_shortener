@@ -17,13 +17,16 @@
         <span>password: admin</span>
 
     </div>
-
     <br>
     <br>
-    {% set urls = UrlsFinder.getUrls %}
+    <div>
+        <a href="api/ranking">Ranking Visitas</a>
+    </div>
+    <br>
+    <br>
 
     {# AQUÍ VAMOS A PINTAR LAS URLS QUE HEMOS IDO CREANDO PARA PODER ACCEDER A ELLAS Y COMPROBAR SI FUNCIONAN DESDE LA PROPIA PÁGINA DE INICIO #}
-
+    {% set urls = UrlsFinder.getUrls %}
     <div>
         <h3>URLs creadas:</h3>
     </div>
