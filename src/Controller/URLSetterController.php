@@ -22,6 +22,7 @@ class URLSetterController extends AbstractController
     }
     public function __invoke(Request $request)
     {
+        //RECOGEMOS LOS PARÁMETROS Y SETEAMOS LA URL ORIGINAL Y LA ACORTADA
         $longUrl = $request->request->get('longUrl');
         $shortUrl = $request->request->get('shortUrl');
         if ($longUrl && $shortUrl) {

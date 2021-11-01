@@ -15,7 +15,7 @@ class URLShortenerController extends AbstractController
 
     public function index(Environment $twig): Response
     {
-
+        //ESTE CONTROLLER RENDERIZA LA PÁGINA DE INICIO DONDE PODEMOS CREAR UNA URL ACORTADA
         return new Response($twig->render('index.html.twig'));
     }
 }

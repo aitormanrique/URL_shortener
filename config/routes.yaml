@@ -30,7 +30,7 @@ lista_compra:
     controller: App\Controller\TestUrlsController::index
 
 short_url:
-    path: /{value}
+    path: /home/{value}
     controller: App\Controller\ShortUrlController
 
 

@@ -35,4 +35,10 @@ class UrlsFinder
         return $this->repository->findOneBy(['original' => $longUrl]);
     }
 
+    public function getUrlByShortOne($shortUrl)
+    {
+        return $this->repository->findOneBy(['shorter' => $shortUrl]);
+    }
+
+
 }

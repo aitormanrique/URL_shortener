@@ -40,14 +40,15 @@ class TestUrlsController extends AbstractController
         SessionInterface $session
     ): Response
     {
+        //ANTES DE LA REDIRECCIÓN, AÑADIMOS UNA VISITA A LA PÁGINA Y SETEAMOS EN LA SESSION EL O LOS VALORES QUE NECESITAMOS PARA RENDERIZARLA
         $session->set('value', $value);
-
         $url = $this->finder->getUrlByLongOne($request->getPathInfo());
-
         $url->setVisitas($url->getVisitas() + 1);
         $this->entityManager->persist($url);
         $this->entityManager->flush();
         if ($url instanceof Urls) {
+            // SETEAMOS EN SESSION TAMBIÉN LA ENTIDAD PARA INDICAR MÁS ADELANTE QUE VENIMOS DE UNA REDIRECCIÓN
+            $session->set('urlEntity', $url);
             return $this->redirectToRoute('short_url', ['value' => $url->getShorter()]);
 
         } else {

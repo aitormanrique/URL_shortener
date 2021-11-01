@@ -15,30 +15,35 @@
     </div>
     <br>
     <div>
+        {# USAMOS ESTA RUTA LARGA COMO BASE PARA NUESTRO EJEMPLO #}
         <span>/api/lista-compra/2021/noviembre/primera-semana/mercadona</span>
     </div>
 
     <br>
     <br>
     {% set urls = UrlsFinder.getUrls %}
+
+    {# AQUÍ VAMOS A PINTAR LAS URLS QUE HEMOS IDO CREANDO PARA PODER ACCEDER A ELLAS Y COMPROBAR SI FUNCIONAN DESDE LA PROPIA PÁGINA DE INICIO #}
+
     {% for value in urls %}
         <div>
                 <a href="{{ value }}">{{ value }}</a>
         </div>
     {% endfor %}
+    {# AÑADIMOS LÓGICA JAVASCRIPT PARA OBTENER UNA URL RANDOM ACORTADA#}
     <script>
 
+        {#  AQUÍ OBTENEMOS UN NÚMERO RANDOM Y LO PASAMOS A STRING #}
         function getrandom(){
             return random_string = Math.random().toString(32).substring(2, 5) + Math.random().toString(32).substring(2, 5);
         }
 
+        {# RECOGEMOS EL VALOR DEL INPUT #}
         function geturl(){
             return document.getElementById('urlinput').value;
         }
 
-        function genhash(){
-            return getrandom();
-        }
+        {# HACEMOS UNA PETICIÓN POST A LA RUTA QUE ALBERGA EL CONTROLLER ENCARGADO DE GUARDAR LAS URLS #}
 
         function send_request(longurl, shortUrl) {
 
@@ -59,9 +64,10 @@
             )
         }
 
+        {# LA FUNCIÓN QUE LLAMAMOS AL CLICAR EL BOTÓN Y QUE RECOGE LAS ANTERIORES #}
         function shorturl(){
             var longurl = geturl();
-            var shortUrl = genhash();
+            var shortUrl = getrandom();
             send_request(longurl, shortUrl);
         }
 
