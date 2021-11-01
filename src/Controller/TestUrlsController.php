@@ -5,6 +5,7 @@ namespace App\Controller;
 
 
 use App\Entity\Urls;
+use App\Entity\Visitas;
 use App\Services\UrlsFinder;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -43,7 +44,9 @@ class TestUrlsController extends AbstractController
         //ANTES DE LA REDIRECCIÓN, AÑADIMOS UNA VISITA A LA PÁGINA Y SETEAMOS EN LA SESSION EL O LOS VALORES QUE NECESITAMOS PARA RENDERIZARLA
         $session->set('value', $value);
         $url = $this->finder->getUrlByLongOne($request->getPathInfo());
-        $url->setVisitas($url->getVisitas() + 1);
+        $visit = new Visitas();
+        $visit->setVisitDate(new \DateTime('now', new \DateTimeZone('Europe/Madrid')));
+        $url->addVisita($visit);
         $this->entityManager->persist($url);
         $this->entityManager->flush();
         if ($url instanceof Urls) {

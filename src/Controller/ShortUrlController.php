@@ -5,6 +5,7 @@ namespace App\Controller;
 
 
 use App\Entity\Urls;
+use App\Entity\Visitas;
 use App\Services\UrlsFinder;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -53,7 +54,9 @@ class ShortUrlController extends AbstractController
             $isRedirect = $this->session->has('urlEntity');
             if (!$isRedirect) {
                 $url = $this->finder->getUrlByShortOne($value);
-                $url->setVisitas($url->getVisitas() + 1);
+                $visit = new Visitas();
+                $visit->setVisitDate(new \DateTime('now', new \DateTimeZone('Europe/Madrid')));
+                $url->addVisita($visit);
                 $this->entityManager->persist($url);
                 $this->entityManager->flush();
             }

@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UrlsRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -28,9 +30,14 @@ class Urls
     private $shorter;
 
     /**
-     * @ORM\Column(type="integer", nullable=true)
+     * @ORM\OneToMany(targetEntity=Visitas::class, mappedBy="url", orphanRemoval=true, cascade={"persist"})
      */
     private $visitas;
+
+    public function __construct()
+    {
+        $this->visitas = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -61,15 +68,34 @@ class Urls
         return $this;
     }
 
-    public function getVisitas(): ?int
+    /**
+     * @return Collection|Visitas[]
+     */
+    public function getVisitas(): Collection
     {
         return $this->visitas;
     }
 
-    public function setVisitas(?int $visitas): self
+    public function addVisita(Visitas $visita): self
     {
-        $this->visitas = $visitas;
+        if (!$this->visitas->contains($visita)) {
+            $this->visitas[] = $visita;
+            $visita->setUrl($this);
+        }
 
         return $this;
     }
+
+    public function removeVisita(Visitas $visita): self
+    {
+        if ($this->visitas->removeElement($visita)) {
+            // set the owning side to null (unless already changed)
+            if ($visita->getUrl() === $this) {
+                $visita->setUrl(null);
+            }
+        }
+
+        return $this;
+    }
+
 }

@@ -28,7 +28,6 @@ class UrlSetter
         $url = new Urls();
         $url->setOriginal($longUrl);
         $url->setShorter($shortUrl);
-        $url->setVisitas(0);
 
 
         $em->persist($url);
