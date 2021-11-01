@@ -6,5 +6,6 @@ https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-ho
 Tras clonar el repositorio, ejecutar los siguientes comandos:
 
 composer install
+
 php bin/console doctrine:migrations:migrate
 
